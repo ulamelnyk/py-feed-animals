@@ -1,5 +1,10 @@
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
+    def __init__(
+            self,
+            name: str,
+            appetite: int,
+            is_hungry: bool = True
+    ) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
@@ -38,7 +43,7 @@ class Dog(Animal):
 def feed_animals(animals: list[Animal]) -> int:
     return sum(animal.feed() for animal in animals)
 
-print('LION')
+
 lion = Animal("Lion", 25)
 lion.print_name()  # "Hello, I'm Lion"
 food_points = lion.feed()  # "Eating 25 food points..."
@@ -46,7 +51,6 @@ print(food_points)  # 25
 print(lion.is_hungry)  # False
 print(lion.feed())  # 0
 
-print('\nCAT')
 cat = Cat("Cat")
 cat.print_name()  # "Hello, I'm Cat"
 cat.feed()  # "Eating 3 food points"
@@ -55,7 +59,6 @@ cat2 = Cat("Cat", False)
 print(cat2.feed())  # 0
 cat2.catch_mouse()  # "The hunt began!"
 
-print('\nDOG')
 dog = Dog("Dog")
 dog.print_name()  # "Hello, I'm Dog"
 dog.feed()  # "Eating 7 food points"
@@ -64,7 +67,6 @@ dog2 = Dog("Dog", False)
 print(dog2.feed())  # 0
 dog2.bring_slippers()  # "The slippers delivered!"
 
-print('\nANIMALS')
 cat = Cat("Cat", False)
 lion = Animal("Lion", 25, True)
 dog = Dog("Dog")
