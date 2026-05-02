@@ -21,7 +21,7 @@ class Cat(Animal):
 
     @staticmethod
     def catch_mouse():
-        print(f'The hunt began!')
+        print("The hunt began!")
 
 class Dog(Animal):
     def __init__(self, name, is_hungry=True):
@@ -30,15 +30,10 @@ class Dog(Animal):
 
     @staticmethod
     def bring_slippers():
-        print(f'The slippers delivered!')
+        print("The slippers delivered!")
 
-def feed_animals(lista):
-    total = 0
-
-    for animal in lista:
-        total += animal.feed()
-
-    return total
+def feed_animals(animals):
+    return sum(animal.feed() for animal in animals)
 
 print('LION')
 lion = Animal("Lion", 25)
